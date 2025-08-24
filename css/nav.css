@@ -1,0 +1,116 @@
+@media(max-width: 768px){
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburgerMenuIconContainer{
+    width: 40px;
+    height: 17px;
+  }
+  nav{
+    position: absolute;
+    right: 0;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+
+    background-color: var(--off-white);
+
+    transition: all 0.35s ease;
+  }
+  .closingMenuIconContainer{
+    opacity: 0;
+
+    align-self: flex-end;
+    margin: 3rem;
+
+    width: 32px;
+    height: 31px;
+
+    transition: all 0.15s ease;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none; /* Remove the default list styling i.e. dot-point */
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 0.75rem;
+  }
+  nav li{
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+  }
+  nav a{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 0 1.5rem;
+    text-decoration: none;
+    color: var(--very-dark-blue);
+  }
+}
+@media(min-width: 769px){
+  .closingMenuIconContainer{
+    display: none;
+  }
+  .hamburgerMenuIconContainer{
+    display: none;
+  }
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none; /* Remove the default list styling i.e. dot-point */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+  }
+  nav li{
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+  }
+  nav a{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 0 0.75rem;
+    text-decoration: none;
+    color: var(--very-dark-blue);
+
+    font-size: max(1rem, 1vw);
+  }
+}
+nav a{
+  transition: color 0.15s ease;
+}

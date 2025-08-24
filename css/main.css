@@ -1,0 +1,20 @@
+@media(max-width: 768px){
+  main{
+    padding: min(10rem, 9vw);
+  }
+}
+@media(min-width: 769px){
+  main{
+    padding: max(3rem, 5vw) max(5rem, 8vw);
+  }
+}
+
+main{
+  min-height: 100svh;
+  width: 100%;
+}
+
+.logoContainer{
+  width: 65px;
+  height: 40px;
+}
