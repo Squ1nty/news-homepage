@@ -99,6 +99,8 @@
   .homepageArtDesignContainer{
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+    align-items: flex-start;
   }
   .homepageWeb3OverviewSection{
     grid-column: 1 / 3;
@@ -146,7 +148,6 @@ main{
 }
 .homepageArtDesignContainer{
   display: flex;
-  align-items: center;
 }
 h1{
   color: var(--very-dark-blue);
