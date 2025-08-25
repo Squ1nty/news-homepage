@@ -4,12 +4,42 @@ let closingMenuIcon = document.querySelector(".closingMenuSVG");
 let closingMenuIconContainer = document.querySelector(".closingMenuIconContainer");
 
 let navBarComponent = document.querySelector("nav");
+let navBarLiList = document.querySelectorAll(".navbarAnchorTag");
+let navBarLastLi = navBarLiList[navBarLiList.length - 1];
 
-if(window.innerWidth <= 768){
-  window.onload = function(){
+function handleNavbarInert(){
+  if(window.innerWidth <= 768){
     navBarComponent.setAttribute("inert", true);
   }
+  else{
+    navBarComponent.removeAttribute("inert");
+  }
 }
+function handleNavbarFocusTrap(){
+  navBarLastLi.addEventListener("keydown", (e) => {
+    /* 
+      For future reference, make sure to add a preventDefault() 
+      when working with "Tab" so that tabbing doesn't just 
+      send a user to the next node in the accessibility tree
+    */
+    e.preventDefault();
+    if(e.key === "Tab"){
+      closingMenuIconContainer.focus();
+    }
+  });
+}
+window.onload = () => {
+  handleNavbarInert();
+  if(window.innerWidth <= 768){
+    handleNavbarFocusTrap();
+  }
+}
+window.addEventListener("resize", (e) => {
+  handleNavbarInert();
+  if(window.innerWidth <= 768){
+    handleNavbarFocusTrap();
+  }
+})
 
 function handleOpenNav(e){
   navBarComponent.removeAttribute("inert");
@@ -21,7 +51,6 @@ function handleOpenNav(e){
   closingMenuIconContainer.removeAttribute("inert");
   closingMenuIconContainer.focus();
 }
-
 hamburgMenuIconContainer.addEventListener("click", (e) => {
   handleOpenNav(e);
 });
@@ -42,7 +71,6 @@ function handleCloseNav(e){
 
   hamburgMenuIconContainer.focus();
 }
-
 closingMenuIconContainer.addEventListener("click", (e) => {
   handleCloseNav(e);
 });

@@ -34,6 +34,7 @@
   }
   nav a{
     padding: 0 1.5rem;
+    cursor: pointer;
   }
 }
 @media(min-width: 769px){
@@ -53,7 +54,7 @@
   }
   nav a{
     padding: 0 0.75rem;
-    font-size: max(1rem, 1vw);
+    font-size: max(1rem, 1.15vw);
   }
 }
 
@@ -62,6 +63,10 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.logoContainer{
+  width: 65px;
+  height: 40px;
 }
 nav ul{
   width: 100%;
