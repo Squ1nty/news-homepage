@@ -350,6 +350,7 @@ h1{
 }
 .web3ReadMoreBtn{
   background-color: var(--soft-red);
+  color: var(--very-dark-blue);
   border: none;
 
   font-weight: 700;

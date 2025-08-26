@@ -36,6 +36,7 @@
     padding: 5.5vw 0;
   }
   nav a{
+    color: var(--very-dark-blue);
     font-size: 4.75vw;
     cursor: pointer;
   }
@@ -56,6 +57,7 @@
     align-items: center;
   }
   nav a{
+    color: var(--dark-grayish-blue);
     padding: 0 0.75rem;
     font-size: max(1rem, 1.25vw);
   }
@@ -95,7 +97,6 @@ nav a{
   align-items: center;
 
   text-decoration: none;
-  color: var(--very-dark-blue);
   transition: color 0.15s ease;
 }
 
