@@ -39,7 +39,7 @@ window.addEventListener("resize", (e) => {
   if(window.innerWidth <= 768){
     handleNavbarFocusTrap();
   }
-})
+});
 
 function handleOpenNav(e){
   navBarComponent.removeAttribute("inert");

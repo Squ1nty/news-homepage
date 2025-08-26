@@ -54,7 +54,7 @@
   }
   nav a{
     padding: 0 0.75rem;
-    font-size: max(1rem, 1.15vw);
+    font-size: max(1rem, 1.25vw);
   }
 }
 

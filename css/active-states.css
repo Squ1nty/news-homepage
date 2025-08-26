@@ -12,3 +12,6 @@ nav a:focus, nav a:hover{
 .newArticleHeading:hover, .newArticleHeading:focus{
   color: var(--soft-orange);
 }
+.topArticleHeading:hover, .topArticleHeading:focus{
+  color: var(--soft-red);
+}
