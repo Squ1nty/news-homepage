@@ -16,10 +16,3 @@ window.onload = function(){
 window.addEventListener("resize", () => {
   handleArtDesign();
 });
-
-readMoreBtn.addEventListener("keydown", (e) => {
-  if(e.key === "Enter"){
-    console.log(readMoreBtn);
-    readMoreBtn.click();
-  }
-});

@@ -1,11 +1,14 @@
 nav a:focus, nav a:hover{
   color: var(--soft-orange);
 }
-.web3ReadMoreBtn:hover{
+.web3ReadMoreBtn:hover, .web3ReadMoreBtn:focus{
   color: var(--off-white);
   background-color: var(--very-dark-blue);
   
 }
 .web3ReadMoreBtn:active{
   opacity: 20%;
+}
+.newArticleHeading:hover, .newArticleHeading:focus{
+  color: var(--soft-orange);
 }
