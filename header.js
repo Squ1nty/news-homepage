@@ -7,6 +7,8 @@ let navBarComponent = document.querySelector("nav");
 let navBarLiList = document.querySelectorAll(".navbarAnchorTag");
 let navBarLastLi = navBarLiList[navBarLiList.length - 1];
 
+let navbarBlur = document.querySelector(".navbarblur");
+
 function handleNavbarInert(){
   if(window.innerWidth <= 768){
     navBarComponent.setAttribute("inert", true);
@@ -30,26 +32,24 @@ function handleNavbarFocusTrap(){
 }
 window.onload = () => {
   handleNavbarInert();
-  if(window.innerWidth <= 768){
-    handleNavbarFocusTrap();
-  }
 }
 window.addEventListener("resize", (e) => {
   handleNavbarInert();
-  if(window.innerWidth <= 768){
-    handleNavbarFocusTrap();
-  }
 });
 
 function handleOpenNav(e){
   navBarComponent.removeAttribute("inert");
-  navBarComponent.style.left = "60%";
+  navBarComponent.style.left = "33%";
+
+  handleNavbarFocusTrap();
 
   hamburgMenuIconContainer.setAttribute("inert", true);
 
   closingMenuIconContainer.style.opacity = "100%";
   closingMenuIconContainer.removeAttribute("inert");
   closingMenuIconContainer.focus();
+
+  navbarBlur.classList.add("active");
 }
 hamburgMenuIconContainer.addEventListener("click", (e) => {
   handleOpenNav(e);
@@ -70,6 +70,7 @@ function handleCloseNav(e){
   closingMenuIconContainer.setAttribute("inert", true);
 
   hamburgMenuIconContainer.focus();
+  navbarBlur.classList.remove("active");
 }
 closingMenuIconContainer.addEventListener("click", (e) => {
   handleCloseNav(e);
